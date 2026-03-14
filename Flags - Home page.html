@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Flags - Home Page</title>
+		<link rel="icon" href="favicon.png">
+		<style>
+		#showlang {
+			border: 1px solid black;
+			border-radius: 7%;
+			height: 70vh;
+			width: 30%;
+			position: absolute;
+			left: 35%;
+			top: 15%;
+			display: none;
+			background-color: white;
+			z-index: 999;
+			padding-top: 1%;
+			box-shadow: 10px 7px 7px rgba(0,0,0,0.1);
+		}
+		#showlang.active {
+			display: block;
+		}
+		html, body {
+			text-align: center;
+			font-family: "Times New Roman", sans-serif, Arial;
+		}
+		.langimg {
+			height: 40%;
+			padding: 5%;
+			cursor: pointer;
+		}
+		h1, img {
+			user-select: none;  
+		}
+		#settingsBtn {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			height: 40px;
+			cursor: pointer;
+			z-index: 1000;
+		}
+		</style>
+	</head>
+	<body>
+		<img id="settingsBtn" src="settings.svg">
+		<div id="showlang">
+			<h1 id="langtext" style="display: flex; justify-content: center; align-items: center;"></h1>
+			<img src="Wielka Brytania.svg" class="langimg" onclick="setLanguage('en')">
+			<img src="Polska.svg" class="langimg" onclick="setLanguage('pl')">
+		</div>
+		
+		<script>
+		const showlangcont = document.getElementById("showlang");
+		const settingsBtn = document.getElementById("settingsBtn");
+		const langflag = document.getElementsByClassName("langimg");
+
+		let jezyk = localStorage.getItem("jezyk") || "en";
+
+		setLanguage(jezyk);
+		
+		function setLanguage(lang) {
+			localStorage.setItem("jezyk", lang);
+			jezyk = lang;
+			
+			const title = document.querySelector("title");
+			const langtext = document.getElementById("langtext");
+			const search = document.getElementById("search");
+			
+			if (lang === "en") {
+				title.innerHTML = "Flags - Home Page"
+				langtext.innerHTML = "Language:"
+				langflag[0].alt = "English"
+				langflag[1].alt = "Polish"
+			} else if (lang === "pl") {
+				title.innerHTML = "Flagi - Strona Główna"
+				langtext.innerHTML = "Język:"
+				langflag[0].alt = "Angielski"
+				langflag[1].alt = "Polski"
+			}
+		}
+
+		if (!jezyk) {
+			jezyk = "en";
+			localStorage.setItem("jezyk", "en");
+		}
+		document.addEventListener("click", (e) => {
+			if (!showlangcont.contains(e.target) && e.target !== settingsBtn) {
+				showlangcont.classList.remove("active");
+			}
+		});
+		for (let i = 0; i < langflag.length; i++) {
+			langflag[i].addEventListener("click", () => {
+				showlangcont.classList.remove("active");
+			});
+		}
+		settingsBtn.addEventListener("click", () => {
+			showlangcont.classList.toggle("active");
+		});
+		</script>
+	</body>
+</html>

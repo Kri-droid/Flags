@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Flags - Search</title>
+		<link rel="icon" href="favicon.png">
+		<style>
+		#showlang {
+			border: 1px solid black;
+			border-radius: 7%;
+			height: 70vh;
+			width: 30%;
+			position: absolute;
+			left: 35%;
+			top: 15%;
+			display: none;
+			background-color: white;
+			z-index: 999;
+			padding-top: 1%;
+			box-shadow: 10px 7px 7px rgba(0,0,0,0.1);
+		}
+		#showlang.active {
+			display: block;
+		}
+		html, body {
+			text-align: center;
+			font-family: "Times New Roman", sans-serif, Arial;
+		}
+		#ukrytyDiv {
+			display: none;
+		}
+		#border {
+			border: 5px solid lightgray;
+			padding: 10px;
+			border-radius: 3%;
+		}
+		.numb {
+			width: 60px;
+		}
+		#borcontent {
+			display: flex;
+			justify-content: center;
+		}
+		.heivpx {
+			height: 5px;
+		}
+		.langimg {
+			height: 40%;
+			padding: 5%;
+			cursor: pointer;
+		}
+		#visblit, #search {
+			cursor: pointer;
+		}
+		a, p, h1, img, button {
+			user-select: none;  
+		}
+		#propwid, #prophei {
+			font-style: italic;
+			font-size: 10px;
+		}
+		#settingsBtn {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			height: 40px;
+			cursor: pointer;
+			z-index: 1000;
+		}
+		</style>
+	</head>
+	<body>
+		<img id="settingsBtn" src="settings.svg">
+		<div id="showlang">
+			<h1 id="langtext" style="display: flex; justify-content: center; align-items: center;"></h1>
+			<img src="Wielka Brytania.svg" class="langimg" onclick="setLanguage('en')">
+			<img src="Polska.svg" class="langimg" onclick="setLanguage('pl')">
+		</div>
+		<div id="borcontent">
+			<div id="border">
+				<div id="panstwowyszukaj">
+					<a class="textlanf"></a>
+					<input id="country">
+				</div>
+				<div class="heivpx"></div>
+				<div id="rokszukaj">
+					<a class="textlanf"></a>
+					<input id="from" class="numb" oninput="numonly(from, true, false);">
+					<a>-</a>
+					<input id="to" class="numb" oninput="numonly(to, true, false);">
+				</div>
+				<div id="ukrytyDiv">
+					<div class="heivpx"></div>
+					<div id="propszukaj">
+						<a class="textlanf"></a>
+						<input id="prophei" class="numb" oninput="numonly(prophei, false, true);">
+						<a>:</a>
+						<input id="propwid" class="numb" oninput="numonly(propwid, false, true);">
+					</div>
+					<div class="heivpx"></div>
+					<div>
+						<a class="textlanf"></a>
+						<select id="variantSelect">
+							<option id="pop" class="textlanf" value="P"></option>
+							<option id="all" class="textlanf" value="O"></option>
+							<option id="unstand" class="textlanf" value="N"></option>
+						</select>
+					</div>
+				</div>
+			</div>
+		<button id="visblit" onclick="bisible('visblit', 'ukrytyDiv', 0)">▼</button>
+		<button id="search" onclick="search()">Search</button>
+		</div>
+		<br>
+			<!-- This website presents flags of countries, historical states and organizations for informational and educational purposes only. 
+The inclusion of any flag does not imply endorsement or support of the entity it represents. -->
+		<script src="dane.js"></script>
+
+		<script src="Flagi - Wyszukiwarka.js"></script>
+	</body>
+</html>
