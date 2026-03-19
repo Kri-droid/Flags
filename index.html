@@ -1,8 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<title>Flags - Home Page</title>
-		<link rel="icon" href="favicon.png">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Page with every flag in the world">
+		<meta property="og:title" content="Flags - Home Page">
+		<meta property="og:description" content="Page with every flag in the world">
+		<meta property="og:type" content="website">
+		<!--<meta property="og:url" content="">-->
+		<!--<link rel="canonical" href="">-->
+		<meta property="og:image" content="ImgToHTML/ogimage.png">
+		<link rel="icon" href="ImgToHTML/favicon.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="ImgToHTML/favicon16x16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="ImgToHTML/favicon32x32.png">
+		<link rel="apple-touch-icon" href="ImgToHTML/apple-touch-icon.png">
 		<style>
 		#showlang {
 			border: 1px solid black;
@@ -22,8 +34,11 @@
 			display: block;
 		}
 		html, body {
+		    overflow-x: hidden;
 			text-align: center;
 			font-family: "Times New Roman", sans-serif, Arial;
+			margin: 0;
+			padding: 0;
 		}
 		.langimg {
 			height: 40%;
@@ -34,23 +49,55 @@
 			user-select: none;  
 		}
 		#settingsBtn {
-			position: absolute;
-			top: 10px;
-			left: 10px;
+			display: flex;
+			height: 45px;
+			cursor: pointer;
+			z-index: 1000;
+			border: 1px solid Gainsboro;
+			border-radius: 10px;
+		}
+		#upmenu {
+			padding-left: 2%;
+			display: flex;
+			background-color: WhiteSmoke;
+			width: 100%;
+			height: 10vh;
+			border-bottom: 1px solid Gainsboro;
+			align-items: center;
+		}
+		#homelink {
+			display: flex;
 			height: 40px;
 			cursor: pointer;
 			z-index: 1000;
+			margin-left: 20px;
+		}
+		#LinkSearch {
+			left: 42.5%;
+			margin-top: 5%;
+			position: absolute;
+			width: 15%;
+			aspect-ratio: 3 / 2;
+			border-radius: 15%;
+			object-fit: cover;
+			font-size: 150%;
 		}
 		</style>
 	</head>
 	<body>
-		<img id="settingsBtn" src="settings.svg">
+		<div id="upmenu">
+			<img id="settingsBtn" src="ImgToHTML/settings.svg">
+			<img id="homelink" href="index.html" src="ImgToHTML/Favicon.svg">
+		</div>
 		<div id="showlang">
 			<h1 id="langtext" style="display: flex; justify-content: center; align-items: center;"></h1>
-			<img src="Wielka brytania.svg" class="langimg" onclick="setLanguage('en')">
-			<img src="Polska.svg" class="langimg" onclick="setLanguage('pl')">
+			<img src="ImgToHTML/Wielka Brytania.svg" class="langimg" onclick="setLanguage('en')">
+			<img src="ImgToHTML/Polska.svg" class="langimg" onclick="setLanguage('pl')">
 		</div>
-		
+		<a href="Search/index.html">
+			<button id="LinkSearch">Search Flags</button>
+		</a>
+		<!-- This website presents flags of countries, historical states and organizations for informational and educational purposes only. The inclusion of any flag does not imply endorsement or support of the entity it represents. -->
 		<script>
 		const showlangcont = document.getElementById("showlang");
 		const settingsBtn = document.getElementById("settingsBtn");
