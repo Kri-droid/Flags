@@ -154,8 +154,9 @@ function resvis(resultlist) {
 		wynik.classList.add("result");
 		wynik.style.width = "225px";
 		wynik.style.border = "1px solid black";
-		wynik.style.marginTop = "10px";
-		wynik.style.padding = "10px";
+		wynik.style.marginTop = "1%";
+		wynik.style.marginLeft = "1%"
+		wynik.style.padding = "1%";
 		wynik.style.cursor = "pointer";
 		wynik.style.textAlign = "center";
 		wynik.style.borderRadius = "5%";
