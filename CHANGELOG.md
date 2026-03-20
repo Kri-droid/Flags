@@ -21,7 +21,7 @@
 - Added Home page
 - Added settings button in top-left corner
 
-# Alpha 1 - 15 XII2025
+# Alpha 1 - 15 XII 2025
 
 - Added Everything in Search page
 
