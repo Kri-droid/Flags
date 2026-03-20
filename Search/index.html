@@ -75,9 +75,8 @@
 		}
 		#settingsBtn {
 			display: flex;
-			height: 45px;
+			height: 70%;
 			cursor: pointer;
-			z-index: 1000;
 			border: 1px solid Gainsboro;
 			border-radius: 10px;
 		}
@@ -91,12 +90,14 @@
 			align-items: center;
 			margin-bottom: 1vh;
 		}
-		#homelink {
+		#homelinklink {
 			display: flex;
-			height: 40px;
+			height: 65%;
 			cursor: pointer;
-			z-index: 1000;
 			margin-left: 20px;
+		}
+		#homelink {
+			width: 100%;
 		}
 		#LinkSearch {
 			left: 42.5%;
@@ -108,29 +109,57 @@
 			object-fit: cover;
 			font-size: 150%;
 		}
+		#changelogbtn {
+			position: absolute;
+			right: 1%;
+			display: flex;
+			height: 10%;
+			cursor: pointer;
+		}
+		#changelog {
+			border: 1px solid black;
+			border-radius: 7%;
+			height: 70vh;
+			width: 50%;
+			position: absolute;
+			left: 25%;
+			top: 15%;
+			display: none;
+			background-color: white;
+			z-index: 999;
+			padding-top: 1%;
+			box-shadow: 10px 7px 7px rgba(0,0,0,0.1);
+			overflow-y: auto; 
+		}
+		#changelog.active {
+			display: block;
+		}
 		</style>
 	</head>
 	<body>
 		<div id="upmenu">
 			<img id="settingsBtn" src="../ImgToHTML/settings.svg">
-			<a href="../index.html">
+			<a id="homelinklink" href="../index.html">
 				<img id="homelink" src="../ImgToHTML/Favicon.svg">
 			</a>
+			<img id="changelogbtn" src="../ImgToHTML/changelog.svg">
 		</div>
 		<div id="showlang">
-			<h1 id="langtext" style="display: flex; justify-content: center; align-items: center;"></h1>
-			<img src="../ImgToHTML/Wielka Brytania.svg" class="langimg" onclick="setLanguage('en')">
-			<img src="../ImgToHTML/Polska.svg" class="langimg" onclick="setLanguage('pl')">
+			<h1 id="langtext" style="display: flex; justify-content: center; align-items: center;">Language:</h1>
+			<img src="../ImgToHTML/Wielka Brytania.svg" class="langimg" onclick="setLanguage('en')" alt="English">
+			<img src="../ImgToHTML/Polska.svg" class="langimg" onclick="setLanguage('pl')" alt="Polish">
+		</div>
+		<div id="changelog">
 		</div>
 		<div id="borcontent">
 			<div id="border">
 				<div id="panstwowyszukaj">
-					<a class="textlanf"></a>
+					<a class="textlanf">Country:</a>
 					<input id="country">
 				</div>
 				<div class="heivpx"></div>
 				<div id="rokszukaj">
-					<a class="textlanf"></a>
+					<a class="textlanf">Years:</a>
 					<input id="from" class="numb" oninput="numonly(from, true, false);">
 					<a>-</a>
 					<input id="to" class="numb" oninput="numonly(to, true, false);">
@@ -138,18 +167,18 @@
 				<div id="ukrytyDiv">
 					<div class="heivpx"></div>
 					<div id="propszukaj">
-						<a class="textlanf"></a>
-						<input id="prophei" class="numb" oninput="numonly(prophei, false, true);">
+						<a class="textlanf">Aspect ratio:</a>
+						<input id="prophei" class="numb" oninput="numonly(prophei, false, true);" placeholder="Height:">
 						<a>:</a>
-						<input id="propwid" class="numb" oninput="numonly(propwid, false, true);">
+						<input id="propwid" class="numb" oninput="numonly(propwid, false, true);" placeholder="Width:">
 					</div>
 					<div class="heivpx"></div>
 					<div>
-						<a class="textlanf"></a>
+						<a class="textlanf">Variant:</a>
 						<select id="variantSelect">
-							<option id="pop" class="textlanf" value="P"></option>
-							<option id="all" class="textlanf" value="O"></option>
-							<option id="unstand" class="textlanf" value="N"></option>
+							<option id="pop" class="textlanf" value="P">Most popular</option>
+							<option id="all" class="textlanf" value="O">All official</option>
+							<option id="unstand" class="textlanf" value="N">Unstandarized</option>
 						</select>
 					</div>
 				</div>
