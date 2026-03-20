@@ -1,5 +1,6 @@
 # 1.0.1 - 20 III 2026
 
+- Change length from pixels to percents in up menu images ( Mobile Friendly )
 - Remove not needed line of code after change display of variants
 - Fixed Bug with Name of Great Britain
 
