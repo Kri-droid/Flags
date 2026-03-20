@@ -20,14 +20,12 @@
 
 - Added Home page
 - Added settings button in top-left corner
-
-# Alpha 1 - 15 XII 2025
-
-- Added Everything in Search page
-
 - Added language change ( English and Polish )
 - Added languge to local storage
 - English is default language
 - Added shadow
 - Change display of variants
 
+# Alpha 1 - 15 XII 2025
+
+- Added Everything in Search page
