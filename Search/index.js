@@ -250,7 +250,7 @@ async function loadChangelog(lang) {
 	try {
 		const res = await fetch(url);
 		const text = await res.text();
-		document.getElementById("changelog").innerHTML = text;
+		document.getElementById("changecontent").innerHTML = text;
 	} catch (err) {
 		console.error("Błąd ładowania:", err);
 	}
