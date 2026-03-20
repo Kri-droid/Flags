@@ -204,17 +204,15 @@ function resvis(resultlist) {
 		}
 		wynik.appendChild(lata);		
 					
-		if (resultlist[i].variant != "1") {
-			let variant = document.createElement("p");
-			if (jezyk === "pl") {
-				variant.textContent = "Wariant: " + resultlist[i].variant[1];
-			} else {
-				variant.textContent = "Variant: " + resultlist[i].variant[2];
-			}
-			variant.style.fontSize = "12px";
-			variant.style.marginBottom = "0px";
-			wynik.appendChild(variant);
+		let variant = document.createElement("p");
+		if (jezyk === "pl") {
+			variant.textContent = "Wariant: " + resultlist[i].variant[1];
+		} else {
+			variant.textContent = "Variant: " + resultlist[i].variant[2];
 		}
+		variant.style.fontSize = "12px";
+		variant.style.marginBottom = "0px";
+		wynik.appendChild(variant);
 	}
 }
 function numonly(inputElement, allowMinus, allowZero) {
