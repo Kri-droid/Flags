@@ -238,7 +238,23 @@ function numonly(inputElement, allowMinus, allowZero) {
 	if (!allowZero && val === '0') val = '';
 	inputElement.value = val;
 }
+async function loadChangelog(lang) {
+	let url = "";
 
+	if (lang === "pl") {
+		url = "https://raw.githubusercontent.com/Kri-droid/Flags/main/CHANGELOGpl.html";
+	} else {
+		url = "https://raw.githubusercontent.com/Kri-droid/Flags/main/CHANGELOG.html";
+	}
+
+	try {
+		const res = await fetch(url);
+		const text = await res.text();
+		document.getElementById("changelog").innerHTML = text;
+	} catch (err) {
+		console.error("Błąd ładowania:", err);
+	}
+}
 
 if (!jezyk) {
     jezyk = "en";
@@ -249,6 +265,11 @@ document.addEventListener("click", (e) => {
 		showlangcont.classList.remove("active");
 	}
 });
+document.addEventListener("click", (e) => {
+	if (!changelog.contains(e.target) && e.target !== changelogbtn) {
+		changelog.classList.remove("active");
+	}
+});
 for (let i = 0; i < langflag.length; i++) {
     langflag[i].addEventListener("click", () => {
         showlangcont.classList.remove("active");
@@ -256,4 +277,8 @@ for (let i = 0; i < langflag.length; i++) {
 }
 settingsBtn.addEventListener("click", () => {
 	showlangcont.classList.toggle("active");
+});
+changelogbtn.addEventListener("click", () => {
+	changelog.classList.toggle("active");
+	loadChangelog(jezyk);
 });
