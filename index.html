@@ -120,6 +120,8 @@
 			<img src="ImgToHTML/Polska.svg" class="langimg" onclick="setLanguage('pl')" alt="Polish">
 		</div>
 		<div id="changelog">
+			<h1 id="changelogtext">Changelog</h1>
+			<a id="changecontent"></a>
 		</div>
 		<a href="Search/index.html">
 			<button id="LinkSearch">Search Flags</button>
@@ -144,18 +146,21 @@
 			const langtext = document.getElementById("langtext");
 			const search = document.getElementById("search");
 			const linksearch = document.getElementById("LinkSearch");
+			const changelogtext = document.getElementById("changelogtext");
 			
 			if (lang === "en") {
 				title.innerHTML = "Flags - Home Page"
 				langtext.innerHTML = "Language:"
 				langflag[0].alt = "English"
 				langflag[1].alt = "Polish"
+				changelogtext.innerHTML = "Changelog"
 				linksearch.innerHTML = "Search Flags"
 			} else if (lang === "pl") {
 				title.innerHTML = "Flagi - Strona Główna"
 				langtext.innerHTML = "Język:"
 				langflag[0].alt = "Angielski"
 				langflag[1].alt = "Polski"
+				changelogtext.innerHTML = "Dziennik Zmian"
 				linksearch.innerHTML = "Wyszukaj Flagi"
 			}
 		}
@@ -172,7 +177,7 @@
 				const res = await fetch(url);
 				const text = await res.text();
 
-				document.getElementById("changelog").innerHTML = text;
+				document.getElementById("changecontent").innerHTML = text;
 			} catch (err) {
 				console.error("Błąd ładowania:", err);
 			}
