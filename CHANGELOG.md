@@ -1,4 +1,4 @@
-<b>1.0.1 - 20 III 2026</b>
+<b style="font-size: 10%;">1.0.1 - 20 III 2026</b>
 
 - Fixed bug in home page: Button. Search Flags was always in English
 - Text Content is return in HTML. Now is in English
