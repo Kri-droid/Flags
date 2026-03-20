@@ -29,12 +29,14 @@ function setLanguage(lang) {
 	const langtext = document.getElementById("langtext");
 	const textlanf = document.getElementsByClassName("textlanf"); 
 	const search = document.getElementById("search");
+	const changelogtext = document.getElementById("changelogtext");
 	
 	if (lang === "en") {
 		title.innerHTML = "Flags - Search"
 		langtext.innerHTML = "Language:"
 		langflag[0].alt = "English"
 		langflag[1].alt = "Polish"
+		changelogtext.innerHTML = "Changelog"
 		textlanf[0].innerHTML = "Country:"
 		textlanf[1].innerHTML = "Years:"
 		textlanf[2].innerHTML = "Aspect ratio:"
@@ -50,6 +52,7 @@ function setLanguage(lang) {
 		langtext.innerHTML = "Język:"
 		langflag[0].alt = "Angielski"
 		langflag[1].alt = "Polski"
+		changelogtext.innerHTML = "Dziennik Zmian"
 		textlanf[0].innerHTML = "Państwo:"
 		textlanf[1].innerHTML = "Lata:"
 		textlanf[2].innerHTML = "Proporcje:"
