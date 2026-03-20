@@ -1,5 +1,8 @@
-# 1.0.1 - 20 III 2026
+<b>1.0.1 - 20 III 2026</b>
 
+- Fixed bug in home page: Button. Search Flags was always in English
+- Text Content is return in HTML. Now is in English
+- Remove not needed line of code: z-index in css ( in showlang it is needed )
 - Change length from pixels to percents in up menu images ( Mobile Friendly )
 - Remove not needed line of code after change display of variants
 - Fixed Bug with Name of Great Britain
