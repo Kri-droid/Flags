@@ -1,6 +1,6 @@
 var data = [
     {
-        "link":"file:\/\/\/C:\\Users\\romek_2llxmzw\\Documents\\Flagi\\Państwa\\XML\\Afganistan 2021- v1.xml",
+        "link":"https:\/\/kri-droid.github.io\/Flags\/Countries\/Afghanistan 2021- v1.svg",
         "country":[
             "Afganistan"
         ],
@@ -23,7 +23,7 @@ var data = [
         "info":null
     },
     {
-        "link":"file:\/\/\/C:\\Users\\romek_2llxmzw\\Documents\\Flagi\\Państwa\\XML\\Afganistan 2021- v2.xml",
+        "link":"https:\/\/kri-droid.github.io\/Flags\/Countries\/Afghanistan 2021- v2.svg",
         "country":[
             "Afganistan"
         ],
@@ -46,7 +46,7 @@ var data = [
         "info":null
     },
     {
-        "link":"file:\/\/\/C:\\Users\\romek_2llxmzw\\Documents\\Flagi\\Państwa\\XML\\Afganistan 2021- v3.xml",
+        "link":"https:\/\/kri-droid.github.io\/Flags\/Countries\/Afghanistan 2021- v3.svg",
         "country":[
             "Afganistan"
         ],
@@ -69,7 +69,7 @@ var data = [
         "info":null
     },
     {
-        "link":"file:\/\/\/C:\\Users\\romek_2llxmzw\\Documents\\Flagi\\Państwa\\XML\\Afganistan 2021- v4.xml",
+        "link":"https:\/\/kri-droid.github.io\/Flags\/Countries\/Afghanistan 2021- v4.svg",
         "country":[
             "Afganistan"
         ],
@@ -92,7 +92,7 @@ var data = [
         "info":null
     },
     {
-        "link":"file:\/\/\/C:\\Users\\romek_2llxmzw\\Documents\\Flagi\\Państwa\\XML\\Albania 1992-2002  — unstandarized.xml",
+        "link":"https:\/\/kri-droid.github.io\/Flags\/Countries\/Albania 1992-2002 vs1.svg",
         "country":[
             "Albania"
         ],
@@ -115,7 +115,7 @@ var data = [
         "info":"22 July 2002 - standarized"
     },
     {
-        "link":"file:\/\/\/C:\\Users\\romek_2llxmzw\\Documents\\Flagi\\Państwa\\XML\\Albania 1992-.xml",
+        "link":"https:\/\/kri-droid.github.io\/Flags\/Countries\/Albania 1992- v1.svg",
         "country":[
             "Albania"
         ],
@@ -138,7 +138,7 @@ var data = [
         "info":"22 July 2002 - standarized"
     },
     {
-        "link":"file:\/\/\/C:\\Users\\romek_2llxmzw\\Documents\\Flagi\\Państwa\\XML\\Algieria 1962-.xml",
+        "link":"https:\/\/kri-droid.github.io\/Flags\/Countries\/Algeria 1962- v1.svg",
         "country":[
             "Algieria"
         ],
@@ -161,7 +161,7 @@ var data = [
         "info":null
     },
     {
-        "link":"file:\/\/\/C:\\Users\\romek_2llxmzw\\Documents\\Flagi\\Państwa\\XML\\Angola 1975-.xml",
+        "link":"https:\/\/kri-droid.github.io\/Flags\/Countries\/Angola 1975- v1.svg",
         "country":[
             "Angola"
         ],
@@ -184,7 +184,30 @@ var data = [
         "info":null
     },
     {
-        "link":"file:\/\/\/C:\\Users\\romek_2llxmzw\\Documents\\Flagi\\Państwa\\XML\\France 1976-2020.xml",
+        "link":"https:\/\/kri-droid.github.io\/Flags\/Countries\/Antigua and Barbuda 1967- v1.svg",
+        "country":[
+            "Antigua i Barbuda"
+        ],
+        "engcountry":[
+            "Antigua and Barbuda"
+        ],
+        "ofcountry":[
+            "Antigua i Barbuda",
+            "Antigua and Barbuda"
+        ],
+        "prophei":2,
+        "propwid":3,
+        "from":1967,
+        "to":null,
+        "variant":[
+            "P",
+            "Normalny",
+            "Normal"
+        ],
+        "info":null
+    },
+    {
+        "link":"https:\/\/kri-droid.github.io\/Flags\/Countries\/France 1976-2020 v1.svg",
         "country":[
             "Francja"
         ],
@@ -207,7 +230,7 @@ var data = [
         "info":null
     },
     {
-        "link":"file:\/\/\/C:\\Users\\romek_2llxmzw\\Documents\\Flagi\\Państwa\\XML\\France 2020-.xml",
+        "link":"https:\/\/kri-droid.github.io\/Flags\/Countries\/France 2020- v1.svg",
         "country":[
             "Francja"
         ],
@@ -230,7 +253,7 @@ var data = [
         "info":null
     },
     {
-        "link":"file:\/\/\/C:\\Users\\romek_2llxmzw\\Documents\\Flagi\\Państwa\\XML\\Syria 1980-2024.xml",
+        "link":"https:\/\/kri-droid.github.io\/Flags\/Countries\/Syria 1980-2024 v1.svg",
         "country":[
             "Syria"
         ],
@@ -253,7 +276,7 @@ var data = [
         "info":null
     },
     {
-        "link":"file:\/\/\/C:\\Users\\romek_2llxmzw\\Documents\\Flagi\\Państwa\\XML\\",
+        "link":"https:\/\/kri-droid.github.io\/Flags\/Countries\/Syria 2024- v1.svg",
         "country":[
             "Syria"
         ],
