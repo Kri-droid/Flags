@@ -145,29 +145,40 @@ function sort(resultlist) {
     return resultlist;
 }
 function resvis(resultlist) {
-	document.querySelectorAll(".result").forEach(el => el.remove());
-	
-	let hr = document.createElement("hr");
-	hr.style.color = "white";
-	hr.classList.add("result")
-	document.body.appendChild(hr);
+	const container = document.getElementById("results");
+	container.innerHTML = "";
 			
 	for (let i = 0; i < resultlist.length; i++) {
+		let flaga = document.createElement("div");
+		flaga.classList.add("result");
+		flaga.style.width = "19.3vw";
+		flaga.style.height = "30vh";
+		flaga.style.border = "1px solid black";
+				flaga.style.display = "inline-block";
+		flaga.style.cursor = "pointer";
+		flaga.style.backgroundImage = `url(${resultlist[i].link})`;
+		flaga.addEventListener("click", () => {
+			window.open(resultlist[i].link, "_blank");
+		});
+		container.appendChild(flaga);
+
 		let wynik = document.createElement("div");
 		wynik.classList.add("result");
-		wynik.style.width = "225px";
+		wynik.style.width = "15vw";
+		wynik.style.height = "30vh";
 		wynik.style.border = "1px solid black";
-		wynik.style.marginTop = "1%";
-		wynik.style.marginLeft = "1%"
+
+		wynik.style.display = "inline-block";
 		wynik.style.padding = "1%";
 		wynik.style.cursor = "pointer";
 		wynik.style.textAlign = "center";
 		wynik.style.borderRadius = "5%";
+
 		wynik.style.boxShadow = "3px 5px 4px #dedfe0"
 		wynik.addEventListener("click", () => {
 			window.open(resultlist[i].link, "_blank");
 		});
-		document.body.appendChild(wynik);
+		container.appendChild(wynik);
 
 		let name = document.createElement("p");
 		name.style.margin = "0 0 4px 0";
@@ -216,6 +227,7 @@ function resvis(resultlist) {
 		variant.style.fontSize = "12px";
 		variant.style.marginBottom = "0px";
 		wynik.appendChild(variant);
+
 	}
 }
 function numonly(inputElement, allowMinus, allowZero) {
