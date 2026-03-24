@@ -149,40 +149,47 @@ function resvis(resultlist) {
 	container.innerHTML = "";
 			
 	for (let i = 0; i < resultlist.length; i++) {
+		let pair = document.createElement("div");
+		pair.classList.add("result");
+		pair.style.width = "40vw";
+		pair.style.height = "31vh";
+		pair.style.display = "flex";
+		pair.style.marginBottom = "1vh";
+		pair.style.alignItems = "stretch";
+		container.appendChild(pair);
+		
 		let flaga = document.createElement("div");
 		flaga.classList.add("result");
 		flaga.style.width = "19.3vw";
-		flaga.style.height = "30vh";
+		flaga.style.height = "100%";
 		flaga.style.border = "1px solid black";
-				flaga.style.display = "inline-block";
 		flaga.style.cursor = "pointer";
-		flaga.style.backgroundImage = `url(${resultlist[i].link})`;
+		flaga.style.backgroundImage = 'url("' + resultlist[i].link + '")';
+		flaga.style.backgroundSize = "contain";
+		flaga.style.backgroundRepeat = "no-repeat";
 		flaga.addEventListener("click", () => {
 			window.open(resultlist[i].link, "_blank");
 		});
-		container.appendChild(flaga);
+		pair.appendChild(flaga);
 
 		let wynik = document.createElement("div");
 		wynik.classList.add("result");
-		wynik.style.width = "15vw";
-		wynik.style.height = "30vh";
+		wynik.style.width = "16.4vw";
+		wynik.style.height = "94.6%";
 		wynik.style.border = "1px solid black";
-
-		wynik.style.display = "inline-block";
 		wynik.style.padding = "1%";
 		wynik.style.cursor = "pointer";
 		wynik.style.textAlign = "center";
-		wynik.style.borderRadius = "5%";
-
-		wynik.style.boxShadow = "3px 5px 4px #dedfe0"
+		wynik.style.borderRadius = "0% 6% 6% 0%";
+		wynik.style.boxShadow = "3px 0px 4px #dedfe0"
 		wynik.addEventListener("click", () => {
 			window.open(resultlist[i].link, "_blank");
 		});
-		container.appendChild(wynik);
+		pair.appendChild(wynik);
 
 		let name = document.createElement("p");
 		name.style.margin = "0 0 4px 0";
-		name.style.fontSize = "40px";
+		name.style.fontSize = "3vw";
 		name.style.fontWeight = "bold";
 
 		if (jezyk === "pl") {
@@ -195,7 +202,8 @@ function resvis(resultlist) {
 		let officialname = document.createElement("p");
 		officialname.style.margin = "0 0 16px 0";
 		officialname.style.fontStyle = "italic";
-				
+		officialname.style.fontSize = "1.2vw";
+		
 		if (jezyk === "pl") {
 			officialname.textContent = resultlist[i].ofcountry[0];
 		} else {
@@ -205,6 +213,8 @@ function resvis(resultlist) {
 
 		let lata = document.createElement("p");
 		lata.style.margin = "0";
+		lata.style.fontSize = "1.2vw";
+		
 		if (resultlist[i].to !== null) {
 			if (resultlist[i].from === resultlist[i].to) {
 				lata.textContent = resultlist[i].from;
@@ -224,8 +234,8 @@ function resvis(resultlist) {
 		} else {
 			variant.textContent = "Variant: " + resultlist[i].variant[2];
 		}
-		variant.style.fontSize = "12px";
-		variant.style.marginBottom = "0px";
+		variant.style.fontSize = "1.1vw";
+		variant.style.marginBottom = "0";
 		wynik.appendChild(variant);
 
 	}
