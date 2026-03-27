@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="210mm" height="297mm" version="1.1" viewBox="0 0 210 297" xmlns="http://www.w3.org/2000/svg">
- <g>
+<svg width="200mm" height="133.33mm" version="1.1" viewBox="0 0 200 133.33" xmlns="http://www.w3.org/2000/svg">
+ <g transform="scale(.99912)" stroke-width="1.0018">
   <path d="m0 0v133.45h66.726v-133.45z" fill="#00006e"/>
   <path d="m66.726 0v133.45h66.726v-133.45z" fill="#fff"/>
   <path d="m133.45 0v133.45h66.726v-133.45z" fill="#f00"/>
