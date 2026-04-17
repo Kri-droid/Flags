@@ -1,0 +1,35 @@
+@media only screen and (max-width: 600px) {
+	#LinkSearch {
+		left: 34%;
+		width: 32%;
+		font-size: 130%;
+	}
+}		
+@media only screen and (min-width: 601px) {
+	#LinkSearch {
+		left: 32.5%;
+		width: 35%;
+		font-size: 135%;
+	}
+}
+@media only screen and (min-width: 798px) {
+	#LinkSearch {
+		left: 37.5%;
+		width: 25%;
+		font-size: 140%;
+	}
+}
+@media only screen and (min-width: 992px) {
+	#LinkSearch {
+		left: 38.75%;
+		width: 22.5%;
+		font-size: 145%;
+	}
+}
+@media only screen and (min-width: 1200px) {
+	#LinkSearch {
+		left: 42.5%;
+		width: 15%;
+		font-size: 170%;
+	}
+}

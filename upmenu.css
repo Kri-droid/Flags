@@ -1,0 +1,160 @@
+html, body {
+   overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-family: "Times New Roman", sans-serif, Arial;
+	user-select: none;
+}
+#upmenu {
+	padding-left: 2%;
+	display: flex;
+	background-color: WhiteSmoke;
+	width: 100%;
+	border-bottom: 1px solid Gainsboro;
+	align-items: center;
+}
+#settingsBtn {
+	display: flex;
+	height: 70%;
+	cursor: pointer;
+	border: 1px solid Gainsboro;
+	border-radius: 10px;
+}
+#homelink {
+	display: flex;
+	height: 65%;
+	cursor: pointer;
+	margin-left: 20px;
+}
+#changelogbtn {
+	position: absolute;
+	right: 1%;
+	display: flex;
+	cursor: pointer;
+}
+/* Showing from Up menu */
+#showlang {
+	border: 1px solid black;
+	border-radius: 7%;
+	position: fixed;
+	top: 15%;
+	display: none;
+	background-color: white;
+	z-index: 999;
+	padding-top: 1%;
+	box-shadow: 10px 7px 7px rgba(0,0,0,0.1);
+}
+#showlang.active {
+	display: block;
+}
+.langimg {
+	height: 13.5%;
+	padding: 5%;
+	cursor: pointer;
+}
+#changelog {
+	padding: 1vh;
+	border: 1px solid black;
+	border-radius: 7%;
+	position: fixed;
+	top: 15%;
+	display: none;
+	background-color: white;
+	z-index: 999;
+	padding-top: 1%;
+	box-shadow: 10px 7px 7px rgba(0,0,0,0.1);
+	overflow-y: auto; 
+}
+#changelog.active {
+	display: block;
+}
+
+
+@media only screen and (max-width: 600px) {
+	#upmenu {
+		height: 7vh;
+	}
+	#changelogbtn {
+		height: 6.5%;
+	}
+	#showlang {
+		height: 50vh;
+		width: 90%;
+		left: 5%;
+	}
+	#changelog {
+		height: 50vh;
+		width: 90%;
+		left: 2.5%;
+	}
+}
+@media only screen and (min-width: 601px) {
+	#upmenu {
+		height: 9vh;
+	}
+	#changelogbtn {
+		height: 8%;
+	}
+	#showlang {
+		height: 60vh;
+		width: 70%;
+		left: 15%;
+	}
+	#changelog {
+		height: 60vh;
+		width: 80%;
+		left: 10%;
+	}
+}
+@media only screen and (min-width: 798px) {
+	#upmenu {
+		height: 11vh;
+	}
+	#changelogbtn {
+		height: 10%;
+	}
+	#showlang {
+		height: 65vh;
+		width: 65%;
+		left: 17.5%;
+	}
+	#changelog {
+		height: 65vh;
+		width: 75%;
+		left: 12.5%;
+	}
+}
+@media only screen and (min-width: 992px) {
+	#upmenu {
+		height: 13vh;
+	}
+	#changelogbtn {
+		height: 12%;
+	}
+	#showlang {
+		height: 70vh;
+		width: 50%;
+		left: 25%;
+	}
+	#changelog {
+		height: 70vh;
+		width: 60%;
+		left: 20%;
+	}
+}
+@media only screen and (min-width: 1200px) {
+	#changelogbtn {
+		height: 13%;
+	}
+	#showlang {
+		height: 70vh;
+		width: 30vw;
+		left: 35vw;
+	}
+	#changelog {
+		height: 70vh;
+		width: 50%;
+		left: 25%;
+	}
+}

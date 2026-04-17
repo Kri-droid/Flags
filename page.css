@@ -1,0 +1,8 @@
+#LinkSearch {
+	margin-top: 5%;
+	position: absolute;
+	aspect-ratio: 3 / 2;
+	border-radius: 15%;
+	object-fit: cover;
+	box-shadow: 4px 4px 10px rgba(0,0,0,0.1);
+}
