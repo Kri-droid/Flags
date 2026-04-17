@@ -266,7 +266,7 @@ function showInfo(url,elem,e) {
 	};
 }
 function pageInfo(n) {
-	let InfoList = ["infopage","construction","colors","fragments"]
+	let InfoList = ["infopage"]
 	let InfoElement = document.getElementById(InfoList[n-1]);
 	InfoElement.addEventListener("click", () => {
 		pageInInfo = n;
@@ -306,9 +306,6 @@ let pageInInfo = 1;
 
 document.getElementById("infopage").style.borderBottom = "0";
 pageInfo(1);
-pageInfo(2);
-pageInfo(3);
-pageInfo(4);
 
 let menu = document.getElementById("infodiv");
 document.addEventListener("click", (e) => {
