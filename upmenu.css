@@ -60,7 +60,7 @@ html, body {
 	position: fixed;
 	top: 15%;
 	display: none;
-	background-color: white;
+	background-color: WhiteSmoke;
 	z-index: 999;
 	padding-top: 1%;
 	box-shadow: 10px 7px 7px rgba(0,0,0,0.1);
