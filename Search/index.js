@@ -26,7 +26,7 @@ function deleteValue() {
 	[country, to, prophei, propwid].forEach(el => el.value = "");
 	from.value = new Date().getFullYear();
 }
-function setLanguage(lang) {
+async function setLanguage(lang) {
     localStorage.setItem("jezyk", lang);
     jezyk = lang;
 
