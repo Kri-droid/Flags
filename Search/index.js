@@ -308,6 +308,11 @@ document.getElementById("infopage").style.borderBottom = "0";
 pageInfo(1);
 
 let menu = document.getElementById("infodiv");
+document.addEventListener('keydown', (event) => {
+	if (event.key === 'Escape') {
+		menu.classList.remove("active");
+	}
+});
 document.addEventListener("click", (e) => {
 	if (!menu.contains(e.target)) {
 		menu.classList.remove("active");
