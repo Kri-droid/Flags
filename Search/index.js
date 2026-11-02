@@ -73,6 +73,7 @@ function setLanguage(lang) {
 		search.innerHTML = "Wyszukaj"
 	}
 	deleteValue();
+	loadChangelog(lang);
 }
 function bisible(butId, diverhidenid, editparam) {
 	const hiddenElement = document.getElementById(diverhidenid);
