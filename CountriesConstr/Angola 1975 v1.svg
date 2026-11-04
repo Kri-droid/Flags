@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200mm" height="133.33mm" version="1.1" viewBox="0 0 200 133.33" xmlns="http://www.w3.org/2000/svg">
+ <g transform="scale(.98717)">
+  <path transform="scale(.26458)" d="m0 0v255.24h765.74v-255.24h-574.3z" fill="#cc092f" stroke-width="3.8784"/>
+  <path transform="scale(.26458)" d="m0 255.24v255.24h765.74v-255.24h-574.3z" stroke-width="3.8286"/>
+ </g>
+ <g transform="scale(.98717)" fill="#ffcb00">
+  <g stroke-width="1.013">
+   <path d="m101.3 37.142 3.5725 10.278 10.878 0.22168-8.6706 6.5736 3.1508 10.415-8.9312-6.2149-8.9312 6.2149 3.1508-10.415-8.6706-6.5736 10.878-0.22169z"/>
+   <path d="m118.54 27.167-1.6259 2.9763c-3.6367-1.5189-8.005-3.2418-11.925-3.6524l-2.5265 7.2557c16.883 2.1271 32.601 16.769 32.601 33.785 0 10.66-5.0336 20.693-13.578 27.067-5.8318 4.3496-12.912 6.6994-20.188 6.6994-4.0198-4e-5 -8.0073-0.71787-11.775-2.1197l-0.06914-0.0259-0.0869-0.0325c-2.8549-1.0784-5.5504-2.5388-8.0129-4.3413l-3.9025 5.5121c1.8189 1.3241 3.745 2.4945 5.7582 3.4989l-1.1895 3.1756 7.9051 2.9611 1.1895-3.1757c3.3254 0.86345 6.7472 1.3004 10.183 1.3005 0.50318 2e-5 1.0063-9e-3 1.5092-0.028l0.47863 3.3572 8.357-1.1912-0.47862-3.3576c3.8225-0.95961 7.4846-2.4718 10.871-4.4888l6.7627-5.0522c2.8945-2.6748 5.3833-5.7576 7.3877-9.151l3.0839 1.4114 3.5128-7.6758-3.0841-1.4114c1.2579-3.735 1.9641-7.6336 2.0963-11.573l3.383-0.23992-0.29856-4.2101-0.29855-4.2101-3.3832 0.23993c-0.68683-3.8809-1.9362-7.6408-3.7086-11.161l2.854-1.8325-4.5608-7.1031-2.854 1.8325c-2.4634-3.0765-5.3624-5.7771-8.6055-8.0166l1.6261-2.9765-3.7041-2.0234z"/>
+   <g transform="scale(.33766)">
+    <path d="m391.83 315.79s9.5824-8.9242 8.8923-9.4253l-123.89-91.056c-6.6784-6.2164-18.372-25.188-18.372-25.188s-10.137 26.297 0.64474 42.23c1.4284 2.111 4.3251 5.0529 8.4541 7.9781l124.27 75.461" color="#000000" color-rendering="auto" dominant-baseline="auto" fill="#ffcb00" image-rendering="auto" shape-rendering="auto" solid-color="#000000" stop-color="#000000" stroke-width="1.0262" style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;font-variation-settings:normal;inline-size:0;isolation:auto;mix-blend-mode:normal;shape-margin:0;shape-padding:0;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal"/>
+   </g>
+  </g>
+  <g transform="matrix(.33766 0 0 .33766 -7.8063 -10.551)" stroke="#010000" stroke-width="5.1001">
+   <path d="m424.75 337.38-1.5273 1.0176c-2.0258 1.3573-3.5817 3.2051-5.8906 5.4609-0.87592 0.77826-1.5032 1.1966-1.7596 1.7686-0.30298 0.74199-0.10799 1.1181 0.19713 1.7412 0.12483 0.26398 0.26576 0.5149 0.43359 0.79492 0.67136 1.1201 1.7997 2.7032 3.3047 4.5547 3.01 3.703 7.4137 8.3644 12.27 11.219 5.9814 3.516 7.3748 4.3473 8.2656 5.459 0.89078 1.1117 1.8765 3.4706 6.1543 9.4688 3.0979 4.3436 6.513 6.6011 9.8555 7.1074 3.3424 0.5063 6.3492-0.80674 8.3652-2.7617 0.9243-0.8963 1.2326-2.0492 1.3027-2.998 0.0702-0.9488-0.0625-1.802-0.23242-2.5586-0.32921-1.4658-0.84531-2.5696-0.87891-2.6426-3.6496-10.123-10.553-16.388-17.816-21.461-7.288-5.0897-14.953-9.14-20.738-14.877z" color="#000000" color-rendering="auto" dominant-baseline="auto" fill="#ffcb00" image-rendering="auto" shape-rendering="auto" solid-color="#000000" stop-color="#000000" stroke="#010000" stroke-width="5.1001" style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;font-variation-settings:normal;inline-size:0;isolation:auto;mix-blend-mode:normal;shape-margin:0;shape-padding:0;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal"/>
+  </g>
+ </g>
+ <g>
+  <circle cx="136.72" cy="106.41" r=".30758"/>
+  <circle cx="138.28" cy="107.41" r=".30758"/>
+  <circle cx="139.64" cy="108.41" r=".30758"/>
+ </g>
+ <g transform="scale(.98717)" fill="none" stroke="#000">
+  <path d="m134.37 104.53-41.157-29.275" stroke-width="1.2156"/>
+  <path d="m115.62 97.488 10.804 6.5498" stroke-width="1.7221"/>
+  <path d="m122.59 93.07 9.0563 6.6691" stroke-width="1.7221"/>
+ </g>
+</svg>
