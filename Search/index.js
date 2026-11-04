@@ -20,7 +20,6 @@ function showevent(button, menu) {
 			menu.classList.remove("active");
 		}
 	});
-
 	document.addEventListener("click", () => {
 		menu.classList.remove("active");
 	});
@@ -33,13 +32,10 @@ async function setLanguage(lang) {
     localStorage.setItem("jezyk", lang);
     jezyk = lang;
 
-	const container = document.getElementById("results");
-	container.innerHTML = "";
-	
 	const title = document.querySelector("title");
 	const langtext = document.getElementById("langtext");
 	const textlanf = document.getElementsByClassName("textlanf"); 
-	const search = document.getElementById("search");
+	const search = document.getElementById("SearchBtn");
 	const changelogtext = document.getElementById("changelogtext");
 	
 	if (lang === "en") {
@@ -97,7 +93,7 @@ function search() {
 	const toVal = to.value.trim() ? Number(to.value) : null;
 	const propWidVal = propwid.value.trim() ? Number(propwid.value) : null;
 	const propHeiVal = prophei.value.trim() ? Number(prophei.value) : null;
-	const variantVal = document.getElementById("variantSelect").value;
+	const variantVal = document.getElementById("SearchVariantSel").value;
 	// KRYTERIUM TEXT  -  const newTextVal = newTextInput.value.trim().toLowerCase();
 	// KRYTERIUM OPTION  -  const newOptionVal = newOptionSelect.value;
 
@@ -105,6 +101,7 @@ function search() {
 		.trim()
 		.toLowerCase()
 		.replace(/\s+/g, "");
+
 
 	const results = data.filter(item => {
 
@@ -352,15 +349,13 @@ pageInfo(2);
 pageInfo(3);
 pageInfo(4);
 
-document.getElementById("infopage").style.borderBottom = "0";
-pageInfo(1);
-
-let menu = document.getElementById("infodiv");
+let menu = document.getElementById("InfoDiv");
 document.addEventListener("click", (e) => {
 	if (!menu.contains(e.target)) {
 		menu.classList.remove("active");
 	}
 });
+
 
 showevent(settingsBtn, showlangcont);
 showevent(changelogbtn, changelog);
