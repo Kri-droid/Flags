@@ -1,21 +1,24 @@
-const country = document.getElementById("country");
-const from = document.getElementById("from");
-const to = document.getElementById("to");
-const prophei = document.getElementById("prophei");
-const propwid = document.getElementById("propwid");
+const country = document.getElementById("SearchCountry");
+const from = document.getElementById("SearchFrom");
+const to = document.getElementById("SearchTo");
+const prophei = document.getElementById("SearchPropHei");
+const propwid = document.getElementById("SearchPropWid");
 const showlangcont = document.getElementById("showlang");
 const settingsBtn = document.getElementById("settingsBtn");
 const langflag = document.getElementsByClassName("langimg");
 
 let jezyk = localStorage.getItem("jezyk") || "en";
-
-setLanguage(jezyk);
-deleteValue();
+let InfoList = ["Info","Constr","Colors","Frag"];
 
 function showevent(button, menu) {
 	button.addEventListener("click", (e) => {
 		e.stopPropagation();
 		menu.classList.toggle("active");
+	});
+	document.addEventListener('keydown', (event) => {
+		if (event.key === 'Escape') {
+			menu.classList.remove("active");
+		}
 	});
 
 	document.addEventListener("click", () => {
@@ -90,7 +93,6 @@ function bisible(butId, diverhidenid, editparam) {
 	}
 }
 function search() {
-	
 	const fromVal = from.value.trim() ? Number(from.value) : null;
 	const toVal = to.value.trim() ? Number(to.value) : null;
 	const propWidVal = propwid.value.trim() ? Number(propwid.value) : null;
@@ -103,7 +105,6 @@ function search() {
 		.trim()
 		.toLowerCase()
 		.replace(/\s+/g, "");
-
 
 	const results = data.filter(item => {
 
@@ -154,7 +155,7 @@ function sort(resultlist) {
     return resultlist;
 }
 function resvis(resultlist) {
-	const container = document.getElementById("results");
+	const container = document.getElementById("Results");
 	container.innerHTML = "";
 			
 	for (let i = 0; i < resultlist.length; i++) {
@@ -178,8 +179,8 @@ function resvis(resultlist) {
 
 		let resultdiv = document.createElement("div");
 		resultdiv.classList.add("resultdiv");
-		resultdiv.addEventListener("click", () => {
-			window.open(linkhref, "_blank");
+		resultdiv.addEventListener("click", (e) => {
+			showInfo(linkhref,elemI,e);
 		});
 		pair.appendChild(resultdiv);
 
@@ -251,38 +252,77 @@ function numonly(input, allowMinus, allowZero) {
 	input.value = val;
 }
 function showInfo(url,elem,e) {
-	let flaginfo = document.getElementById("flaginfo");
-	e.stopPropagation();
-	const isSame = flaginfo.src === url;
-	if (menu.classList.contains("active") && isSame) {
-		menu.classList.remove("active");
-		return;
+	function showInfoByPage(num) {
+		let flaginfo = null; 
+		
+		if(num!=2 && num!=3) {
+			flaginfo = document.getElementById(InfoList[num]+"Flag");
+			e.stopPropagation();
+			const isSame = flaginfo.src === url;
+			if (menu.classList.contains("active") && isSame) {
+				menu.classList.remove("active");
+				return;
+			}
+		}
+		if (num == 0) {
+			flaginfo.src = url;
+			flaginfo.style.aspectRatio = elem.propwid + " / " + elem.prophei;
+			document.getElementById("nameInfo").textContent = jezyk=="pl" ? elem.country[0] : elem.engcountry[0];
+			document.getElementById("OffNameInfo").textContent = jezyk=="pl" ? elem.ofcountry[0] : elem.ofcountry[1];
+			document.getElementById("InfoYears").textContent =
+				elem.to !== null
+					? (elem.from === elem.to
+						? elem.from
+						: elem.from + " - " + elem.to)
+					: (jezyk === "pl"
+						? elem.from + " - Dziś"
+						: elem.from + " - Today");
+			document.getElementById("InfoProp").textContent = elem.prophei+":"+elem.propwid
+			flaginfo.onclick = function () {
+				window.open(url, "_blank");
+			};
+		} else if (num == 1) {
+			url = url.replace("Countries/","CountriesConstr/");
+			flaginfo.src = url;
+			flaginfo.style.height = "auto";
+			flaginfo.onclick = function () {
+				window.open(url, "_blank");
+			};
+		}
+		menu.classList.add("active");
 	}
-	flaginfo.src = url;
-	flaginfo.style.aspectRatio = elem.propwid + " / " + elem.prophei;
-	menu.classList.add("active");
-	flaginfo.onclick = function () {
-		window.open(url, "_blank");
-	};
+	showInfoByPage(0);
+	showInfoByPage(1);
+	showInfoByPage(2);
 }
-function pageInfo(n) {
-	let InfoList = ["infopage"]
+function pageInfo(n, start) {
 	let InfoElement = document.getElementById(InfoList[n-1]);
-	InfoElement.addEventListener("click", () => {
+	let InfoCont = document.getElementById(InfoList[n-1]+"Cont");
+	function pageInfoLower() {
 		pageInInfo = n;
 		InfoElement.style.borderBottom = 0;
-		InfoElement.style.borderBottom = 0;
+		InfoElement.style.backgroundColor = "white";
 		InfoElement.style.fontWeight = "bold";
+		InfoCont.style.display = "flex";
 		for (let i = 0; i<InfoList.length;i++) {
 			if (i != n-1) {
 				let forInfoElement = document.getElementById(InfoList[i]);
 				forInfoElement.style.borderBottom = "2px solid black";
+				forInfoElement.style.backgroundColor = "WhiteSmoke";
 				forInfoElement.style.fontWeight = "normal";
+				let forInfoCont = document.getElementById(InfoList[i]+"Cont");
+				forInfoCont.style.display = "none";
 			} else {
 				continue;
 			}
 		}
+	}
+	InfoElement.addEventListener("click", () => {
+		pageInfoLower();
 	});
+	if(start) {
+		pageInfoLower();
+	}
 }
 async function loadChangelog(lang) {
 	let url = "";
@@ -302,24 +342,25 @@ async function loadChangelog(lang) {
 	}
 }
 
+setLanguage(jezyk);
+deleteValue();
+loadChangelog(jezyk);
+
 let pageInInfo = 1;
+pageInfo(1,true);
+pageInfo(2);
+pageInfo(3);
+pageInfo(4);
 
 document.getElementById("infopage").style.borderBottom = "0";
 pageInfo(1);
 
 let menu = document.getElementById("infodiv");
-document.addEventListener('keydown', (event) => {
-	if (event.key === 'Escape') {
-		menu.classList.remove("active");
-	}
-});
 document.addEventListener("click", (e) => {
 	if (!menu.contains(e.target)) {
 		menu.classList.remove("active");
 	}
 });
-
-loadChangelog(jezyk);
 
 showevent(settingsBtn, showlangcont);
 showevent(changelogbtn, changelog);
