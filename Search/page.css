@@ -1,7 +1,7 @@
-#ukrytyDiv {
+#SearchHid {
 	display: none;
 }
-#border {
+#SearchBord {
 	border: 5px solid lightgray;
 	padding: 10px;
 	border-radius: 3%;
@@ -9,7 +9,7 @@
 .numb {
 	width: 60px;
 }
-#borcontent {
+#Search {
 	display: flex;
 	justify-content: center;
 	margin-top: 2vh;
@@ -17,10 +17,10 @@
 .heivpx {
 	height: 1vh;
 }
-#visblit, #search {
+#visblit, #SearchBtn {
 	cursor: pointer;
 }
-#propwid, #prophei {
+#SearchPropWid, #SearchPropHei {
 	font-style: italic;
 	font-size: 10px;
 }
