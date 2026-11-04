@@ -38,51 +38,69 @@
 			<h1 id="changelogtext">Changelog</h1>
 			<a id="changecontent"></a>
 		</div>
-		<div id="borcontent">
-			<div id="border">
-				<div id="panstwowyszukaj">
-					<a class="textlanf">Country:</a>
-					<input id="country">
-				</div>
+		<div id="Search">
+			<div id="SearchBord">
+				<!--Państwo-->
+				<a class="textlanf">Country:</a>
+				<input id="SearchCountry">
 				<div class="heivpx"></div>
-				<div id="rokszukaj">
-					<a class="textlanf">Years:</a>
-					<input id="from" class="numb" oninput="numonly(from, true, false);">
-					<a>-</a>
-					<input id="to" class="numb" oninput="numonly(to, true, false);">
-				</div>
-				<div id="ukrytyDiv">
+				<!--Rok-->
+				<a class="textlanf">Years:</a>
+				<input id="SearchFrom" class="numb" oninput="numonly(this, true, false);">
+				<a>-</a>
+				<input id="SearchTo" class="numb" oninput="numonly(this, true, false);">
+				<!--Ukryty-->
+				<div id="SearchHid">
 					<div class="heivpx"></div>
-					<div id="propszukaj">
-						<a class="textlanf">Aspect ratio:</a>
-						<input id="prophei" class="numb" oninput="numonly(prophei, false, true);" placeholder="Height:">
-						<a>:</a>
-						<input id="propwid" class="numb" oninput="numonly(propwid, false, true);" placeholder="Width:">
-					</div>
+					<!--Proporcje-->
+					<a class="textlanf">Aspect ratio:</a>
+					<input id="SearchPropHei" class="numb" oninput="numonly(this, false, true);" placeholder="Height:">
+					<a>:</a>
+					<input id="SearchPropWid" class="numb" oninput="numonly(this, false, true);" placeholder="Width:">
 					<div class="heivpx"></div>
-					<div>
-						<a class="textlanf">Variant:</a>
-						<select id="variantSelect">
-							<option id="pop" class="textlanf" value="P">Most popular</option>
-							<option id="all" class="textlanf" value="O">All official</option>
-							<option id="unstand" class="textlanf" value="N">Unstandarized</option>
-						</select>
-					</div>
+					<!--Wariant-->
+					<a class="textlanf">Variant:</a>
+					<select id="SearchVariantSel">
+						<option class="textlanf" value="P">Most popular</option>
+						<option class="textlanf" value="O">All official</option>
+						<option class="textlanf" value="N">Unstandarized</option>
+					</select>
 				</div>
 			</div>
-			<button id="visblit" onclick="bisible('visblit', 'ukrytyDiv', 0)">▼</button>
-			<button id="search" onclick="search()">Search</button>
+			<button id="visblit" onclick="bisible('visblit', 'SearchHid', 0)">▼</button>
+			<button id="SearchBtn" onclick="search()">Search</button>
 		</div>
 		<br>
 		<hr style="color: white;">
-		<div id="results"></div>
-		<div id="infodiv">
-			<div id="pagesInfo">
-				<div id="infopage" class="infopage">INFO</div>
+		<div id="Results"></div>
+		<div id="InfoDiv">
+			<div id="InfoDivPages">
+				<div id="Info" class="infopage">INFO</div>
+				<div id="Constr" class="infopage">CONSTRUCTION</div>
+				<div id="Colors" class="infopage">COLORS</div>
+				<div id="Frag" class="infopage">FRAGMENTS</div>
 			</div>
-			<img id="flaginfo">
+			<div id="InfoCont">
+				<div id="InfoLeft">
+					<img id="InfoFlag">
+					<p id="InfoProp"></p>
+				</div>
+				<div id="InfoData">
+					<p id="nameInfo" class="name"></p>
+					<p id="OffNameInfo" class="officialname"></p>
+					<p id="InfoYears" class="years"></p>
+				</div>
+				<p id="InfoText"></p>
+			</div>
+			<div id="ConstrCont">
+				<div id="ConstrDiv">
+					<img id="ConstrFlag">
+				</div>
+			</div>
+			<div id="ColorsCont"></div>
+			<div id="FragCont"><p>Nothing Yet</p></div>
 		</div>
 		<script src="data.js"></script>
-		<script src="index.js"></script>
+		<script src="index.js" defer></script>
 	</body>
 </html>
