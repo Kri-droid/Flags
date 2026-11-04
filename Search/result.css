@@ -1,4 +1,4 @@
-#results {
+#Results {
   display: flex;
   flex-wrap: wrap;
   padding: 1%;
@@ -58,7 +58,7 @@
 	display:inline-block;
 	cursor: pointer;
 }
-#infodiv {
+#InfoDiv {
 	border: 1px solid black;
 	border-radius: 5%;
 	position: fixed;
@@ -69,11 +69,12 @@
 	padding: 0;
 	box-shadow: 10px 7px 7px rgba(0,0,0,0.1);
 	text-align: left;
+	overflow-y: auto; 
 }
-#infodiv.active {
+#InfoDiv.active {
 	display: block;
 }
-#pagesInfo {
+#InfoDivPages {
 	display: flex;
 }
 .infopage {
@@ -84,28 +85,65 @@
 	align-content: center;
 	font-family: sans-serif, Arial;
 }
-#infopage {
+#Info {
 	border-right: 2px solid black;
 	font-size: 150%;
 	font-weight: bold;
 }
-#construction {
+#Constr {
 	border-right: 2px solid black;
 	border-bottom: 2px solid black;
 	font-size: 100%;
 }
-#colors {
+#Colors {
 	border-right: 2px solid black;
 	border-bottom: 2px solid black;
 	font-size: 150%;
 }
-#fragments {
+#Frag {
 	border-bottom: 2px solid black;
 	font-size: 100%;
 }
-#flaginfo {
-	margin: 2% 0 0 2%;
+#InfoCont {
+	align-items: flex-start;	
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+#InfoLeft {
+	margin: 2%;
 	width: 45%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#InfoData {
+	text-align: center;
+	width: 51%;
+}
+#InfoFlag {
+	width:100%;
 	border: 1px solid gainsboro;
 	box-shadow: 5px 3px 3px rgba(0,0,0,0.1);
+	cursor: pointer;
+}
+#InfoProp {
+	text-align: center;
+	margin-top: 5px;
+	font-size: 150%;
+}
+#InfoText {
+	flex-wrap: wrap;
+	margin-left: 1%;
+}
+#ConstrDiv {
+	margin: 2%;
+	width: 40%;
+	padding: 1%;
+	display: flex;
+	border: 1px solid gainsboro;
+	box-shadow: 5px 3px 3px rgba(0,0,0,0.1);
+}
+#ConstrFlag {
+	width:95%;
+	cursor: pointer;
 }
